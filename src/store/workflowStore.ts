@@ -1,5 +1,5 @@
-import { create } from 'zustand';
-import { Node, Edge, Workflow } from '../types/workflow';
+import { create } from "zustand";
+import { Node, Edge, Workflow } from "../types/workflow";
 
 interface WorkflowState {
   nodes: Node[];
@@ -30,7 +30,6 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
       return pushToHistory(newState);
     });
   },
-
   updateNode: (id, data) => {
     set((state) => {
       const newNodes = state.nodes.map((node) =>
@@ -40,7 +39,6 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
       return pushToHistory(newState);
     });
   },
-
   removeNode: (id) => {
     set((state) => {
       const newNodes = state.nodes.filter((node) => node.id !== id);
@@ -88,11 +86,11 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
 
   saveWorkflow: () => {
     const { nodes, edges } = get();
-    localStorage.setItem('workflow', JSON.stringify({ nodes, edges }));
+    localStorage.setItem("workflow", JSON.stringify({ nodes, edges }));
   },
 
   loadWorkflow: () => {
-    const saved = localStorage.getItem('workflow');
+    const saved = localStorage.getItem("workflow");
     if (saved) {
       const { nodes, edges } = JSON.parse(saved);
       set({ nodes, edges, history: [], currentIndex: -1 });
