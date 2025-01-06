@@ -5,3 +5,4 @@ This project is a workflow visualization tool built with React, TypeScript, and 
 # Workflow Visualization Tool
 
 ![Image](image.png)
+![Graph](image-1.png)
