@@ -14,6 +14,6 @@ Check out the live demo here: https://workflowreact.vercel.app/
 
 # Workflow Visualization Tool
 
-![Image](image.png)
-![Graph](image-3.png)
-![Pie](image-4.png)
+![Image](public/images/image.png)
+![Graph](public/images/image-3.png)
+![Pie](public/images/image-4.png)
